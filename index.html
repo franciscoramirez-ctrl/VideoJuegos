@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GameVerse - El Mundo de los Videojuegos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Encabezado y Menú de navegación -->
+  <header>
+    <div class="logo">
+      <h1>🎮 GameVerse</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#destacados">Juegos Destacados</a></li>
+        <li><a href="#historia">Historia</a></li>
+        <li><a href="#comunidad">Comunidad</a></li>
+      </ul>
+      <!-- Funcionalidad JS 1: Cambio de tema -->
+      <button id="btn-tema" class="btn">☀️ Modo Claro</button>
+    </nav>
+  </header>
+
+  <!-- Sección Principal (Hero) -->
+  <main id="inicio" class="hero">
+    <h2>Explorá el universo de los videojuegos</h2>
+    <p>Desde los clásicos arcade de los años 70 hasta los mundos abiertos de última generación. Descubrí los títulos que marcaron la historia.</p>
+    <a href="#destacados" class="btn btn-primario">Ver Catálogo</a>
+  </main>
+
+  <!-- Sección de Contenido 1: Juegos Destacados con Buscador en vivo -->
+  <section id="destacados" class="contenedor">
+    <h2>Títulos Icónicos por Género</h2>
+    <p class="subtitulo">Filtrá los juegos por nombre o género usando el buscador:</p>
+
+    <!-- Funcionalidad JS 2: Buscador en tiempo real -->
+    <div class="buscador-box">
+      <input type="text" id="buscador" placeholder="🔍 Buscar por juego o género (ej. Sandbox, RPG, Acción)...">
+    </div>
+
+    <div class="tarjetas" id="lista-juegos">
+      <article class="tarjeta" data-info="minecraft sandbox aventura construccion">
+        <img src="https://images.unsplash.com/photo-1587573089734-09cb69c0f2b4?auto=format&fit=crop&w=600&q=80" alt="Bloques estilo mundo abierto">
+        <span class="etiqueta">Sandbox / Aventura</span>
+        <h3>Minecraft (2011)</h3>
+        <p>Desarrollado por Mojang Studios, es el videojuego más vendido de la historia con más de 300 millones de copias. Permite explorar y construir mundos infinitos hechos de bloques.</p>
+      </article>
+
+      <article class="tarjeta" data-info="the legend of zelda breath of the wild rpg mundo abierto">
+        <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=600&q=80" alt="Control de consola retro y moderna">
+        <span class="etiqueta">Acción / RPG</span>
+        <h3>The Legend of Zelda: Breath of the Wild (2017)</h3>
+        <p>Revolucionó el diseño de mundos abiertos otorgando libertad total al jugador para explorar el reino de Hyrule, resolver santuarios y derrotar a Ganon.</p>
+      </article>
+
+      <article class="tarjeta" data-info="tetris puzzle arcade clasico">
+        <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80" alt="Máquina arcade clásica">
+        <span class="etiqueta">Puzzle / Arcade</span>
+        <h3>Tetris (1984)</h3>
+        <p>Creado por Alekséi Pázhitnov, este clásico de lógica y velocidad consiste en encajar piezas geométricas (tetrominós) y sigue vigente en competencias mundiales.</p>
+      </article>
+
+      <article class="tarjeta" data-info="counter strike 2 shooter esports competitivo">
+        <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=600&q=80" alt="Torneo de Esports">
+        <span class="etiqueta">Shooter Táctico / Esports</span>
+        <h3>Counter-Strike 2 (2023)</h3>
+        <p>Uno de los pilares de los deportes electrónicos (Esports) en PC. Enfrenta a dos equipos de cinco jugadores en rondas estratégicas de ataque y defensa.</p>
+      </article>
+    </div>
+    <p id="sin-resultados" class="oculto">No se encontraron juegos con ese criterio de búsqueda.</p>
+  </section>
+
+  <!-- Sección de Contenido 2: Breve Historia y Datos Curiosos -->
+  <section id="historia" class="contenedor">
+    <h2>Evolución de la Industria</h2>
+    <p>La industria de los videojuegos pasó de simples puntos blancos en pantallas monocromáticas como <strong>Pong (1972)</strong> a generar más ingresos globales que el cine y la música juntos.</p>
+    
+    <!-- Funcionalidad JS 3: Botón para desplegar línea de tiempo -->
+    <button id="btn-historia" class="btn btn-primario">Ver hitos históricos</button>
+    
+    <div id="info-historia" class="oculto caja-historia">
+      <ul>
+        <li><strong>1972:</strong> Lanzamiento de la Magnavox Odyssey (primera consola doméstica) y Pong en arcades.</li>
+        <li><strong>1985:</strong> Nintendo lanza la NES junto a <em>Super Mario Bros.</em>, rescatando la industria tras la crisis de 1983.</li>
+        <li><strong>1994:</strong> Sony irrumpe en el mercado con la primera PlayStation y populariza los gráficos en 3D.</li>
+        <li><strong>Actualidad:</strong> Auge del juego en la nube, realidad virtual y torneos de Esports con millones de espectadores.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Sección de Contenido 3: Comunidad y Formulario -->
+  <section id="comunidad" class="contenedor">
+    <h2>Sumate a la Comunidad</h2>
+    <p>¿Cuál es tu videojuego favorito? Dejanos tu recomendación para agregarla al catálogo en la próxima actualización.</p>
+    
+    <form id="form-recomendacion" class="formulario">
+      <input type="text" id="nombre-usuario" placeholder="Tu nombre o gamertag" required>
+      <input type="text" id="juego-recomendado" placeholder="Nombre del videojuego" required>
+      <button type="submit" class="btn btn-primario">Enviar recomendación</button>
+    </form>
+    <p id="mensaje-form" class="mensaje-exito"></p>
+  </section>
+
+  <!-- Pie de página (Footer) -->
+  <footer>
+    <p>© 2026 GameVerse - Proyecto Integrador de Desarrollo Web</p>
+    <p>Integrantes: [Completar con los nombres del grupo]</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
